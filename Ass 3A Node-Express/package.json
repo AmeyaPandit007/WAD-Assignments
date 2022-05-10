@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "name": "assignment-3a",
+  "version": "1.0.0",
+  "description": "Static Page with Node.js",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ameya Pandit",
+  "license": "ISC"
+}
