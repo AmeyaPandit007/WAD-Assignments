@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form action="display.html">
+        <table cellspacing="10px" cellpadding="10px">
+            <tr>
+                <td><label for="name">NAME :- </label></td>
+                <td><input type="text" placeholder="Your Name" class="valid" id="name" required="true"></td>
+            </tr>
+            <tr>
+                <td><label for="age">AGE :-</label></td>
+                <td><input type="number" placeholder="Your Age" class="valid" id="age" maxlength="2" required></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email :-</label></td>
+                <td><input type="email" placeholder="Your Email" class="valid" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <td><button onclick="sendData()">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function sendData() {
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            var email = document.getElementById('email').value;
+
+            localStorage.setItem("Name",name);
+            localStorage.setItem("Age",age);
+            localStorage.setItem("Email",email);
+
+            return false;
+        }
+    </script>
+</body>
+</html>
