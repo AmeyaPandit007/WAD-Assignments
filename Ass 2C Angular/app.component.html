@@ -1,0 +1,105 @@
+<div *ngIf="signup_form" class="container">
+  <form #simpleForm="ngForm" class="border p-3 rounded-3">
+    <div class="row g-0">
+      <div class="col text-center bg-light p-2 mb-3">
+        <span><strong>Register</strong></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="fname">FirstName :</label>
+        <input type="text" class="form-control" name="fname" id="fname" ngModel required autofocus>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label" for="lname">LastName :</label>
+        <input type="text" class="form-control" name="lname" id="lname" ngModel required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="mb">Email Id :</label>
+        <input type="email" class="form-control" name="email" id="email" ngModel required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="mb">Mobile Number :</label>
+        <input type="tel" class="form-control" name="mb" id="mb" ngModel required>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label" for="age">Age :</label>
+        <input type="number" class="form-control" name="age" id="age" ngModel required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="pass">Password :</label>
+        <input type="password" class="form-control" name="pass" id="pass" ngModel required>
+      </div>
+      <div class="col mb-3">
+        <label class="form-label" for="rpass">Confirm Password :</label>
+        <input type="password" class="form-control" name="rpass" id="rpass" ngModel required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4 offset-2">
+        <div class="d-grid">
+            <button (click)="getValues(simpleForm.value)" type="submit" class="btn btn-dark" [disabled]="simpleForm.form.invalid">SignUp</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="d-grid">
+          <button (click)="toggleForm()" type="submit" class="btn btn-danger">Login</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- **************************LOGIN******************************* -->
+
+<div *ngIf="login_form" class="container cont2">
+  <form #simpleForm="ngForm" class="border p-3 rounded-3">
+    <div class="row g-0">
+      <div class="col text-center bg-light p-2 mb-3">
+        <span><strong>Login</strong></span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="username">Username :</label>
+        <input class="form-control" ngModel name="username" type="text" id="username" placeholder="Your Name">
+      </div>     
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <label class="form-label" for="password">Password :</label>
+        <input class="form-control" ngModel name="password" type="password" id="password">
+      </div>     
+    </div>
+    <div class="row">
+      <div class="col-4 offset-2">
+        <div class="d-grid">
+            <button (click)="getValues_login(simpleForm.value)" type="submit" class="btn btn-dark">Login</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="d-grid">
+          <button (click)="viewProfile()" type="submit" class="btn btn-danger">View Profile</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- **************************DISPLAY************************** -->
+
+<div class="container-fluid text-center text-dark" *ngIf="display_form" style="background: linear-gradient(to left top, rgb(5, 238, 67), rgb(6, 218, 247));">
+  <h1 id="title"></h1>
+
+  <h3><span id="fname"></span></h3>
+  <h3><span id="lname"></span></h3> 
+  <h3><span id="email"></span></h3> 
+  <h3><span id="mbno"></span></h3> 
+  <h3><span id="age"></span></h3> 
+</div>

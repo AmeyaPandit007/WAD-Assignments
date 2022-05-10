@@ -1,0 +1,22 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-3 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+form {
+    background: linear-gradient(to bottom right,rgb(7, 204, 239),rgba(7, 53, 239, 0.918));
+    width: 500px;
+}
