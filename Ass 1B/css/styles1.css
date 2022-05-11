@@ -1,0 +1,30 @@
+.registration form {
+    background: linear-gradient(to right,#00AAFF,#00FF6C);
+    padding: 3%;
+    margin: 3%;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+    margin-bottom: 30px;
+}
+
+label {
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 5px 20px;
+}
+
+/* @media (max-width:624)
+{
+    .PNT {
+        color: chocolate;
+    }
+} */
